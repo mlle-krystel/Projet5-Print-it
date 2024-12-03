@@ -1,3 +1,4 @@
+// tableau des slides
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -26,11 +27,11 @@ const precedent = document.getElementById("precedent");
 const suivant = document.getElementById("suivant");
 
 // Vérif
-console.log("Bouton Précédent :", precedent);
-console.log("Bouton Suivant :", suivant);
+console.log("precedent :", precedent);
+console.log("suivant :", suivant);
 
 
-// Gestionnaire d'événement pour "Précédent"
+// Evénement pour "Précédent"
 precedent.addEventListener("click", function() {
   index = (index - 1 + slides.length) % slides.length; 
 
@@ -39,5 +40,13 @@ precedent.addEventListener("click", function() {
 
 suivant.addEventListener("click", function() { index = (index + 1) % slides.length;
 console.log("slide suivant, index :", index)});
+
+// test pour dots
+const bullets = document.querySelector(".dots");
+bullets.classList.add("dot");
+console.log(bullets);
+
+// creation de 4 dots
+numberDots = 4;
 
 
