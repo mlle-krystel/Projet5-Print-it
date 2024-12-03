@@ -17,6 +17,10 @@ const slides = [
 	}
 ]
 
+// Initialisation de l'index
+let index = 0;
+console.log("Index initial : ", index);
+
 // Sélection des flèches
 const precedent = document.getElementById("precedent");
 const suivant = document.getElementById("suivant");
