@@ -72,6 +72,10 @@ activeSlide();
 slides.forEach(function(slide, indexSlide) {
 	const dot = document.createElement("span");
 	dot.classList.add("dot");
+	if(indexSlide === 0) {
+		dot.classList.add("dot_selected")
+	  }
+
 	// attribution à la div .dots
 	bulletsContainer.appendChild(dot);
 
@@ -79,7 +83,7 @@ slides.forEach(function(slide, indexSlide) {
 dot.addEventListener("click", function() {
 	// mise à jour l'index general (indexcurrent) avec le dot actif
 indexCurrent = indexSlide;
-activeSlide();
+
 
 
 // mise à jour de l'affichage // à l'index actif
